@@ -1132,6 +1132,83 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--gray);
 }
 
+<!-- FOUNDER -->
+<section id="founder" style="padding:110px 0 120px;background:#FAF6EE;position:relative;overflow:hidden;">
+<style>
+.founder-inner{display:grid;grid-template-columns:420px 1fr;gap:80px;align-items:center}
+.founder-photo-frame{position:relative;width:100%;border-radius:20px;overflow:hidden;background:linear-gradient(160deg,#EDE0C4 0%,#D9C9A8 100%);aspect-ratio:4/5;box-shadow:0 24px 70px rgba(0,0,0,0.13)}
+.founder-photo-frame img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.founder-photo-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:#B0956A;font-family:var(--font-ui);text-align:center;padding:40px}
+.founder-photo-placeholder .ph-icon{font-size:3.5rem;opacity:0.5}
+.founder-photo-placeholder .ph-label{font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;opacity:0.6;line-height:1.6}
+.founder-accent-bar{position:absolute;bottom:-16px;left:24px;right:24px;height:5px;background:linear-gradient(90deg,#B22222,#FF9933,#D4AF37);border-radius:0 0 4px 4px}
+.founder-years-badge{position:absolute;top:24px;right:-18px;background:linear-gradient(135deg,#D4AF37,#FF9933);color:#222;padding:14px 18px;border-radius:14px;font-family:var(--font-display);font-weight:900;text-align:center;box-shadow:0 8px 28px rgba(212,175,55,0.35);line-height:1.1}
+.founder-years-badge .by-big{font-size:1.8rem;display:block}
+.founder-years-badge .by-small{font-family:var(--font-ui);font-size:0.6rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;margin-top:4px;display:block}
+.founder-content{padding-right:20px}
+.founder-eyebrow{font-family:var(--font-ui);font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#B22222;margin-bottom:22px;display:block}
+.founder-quote-mark{font-family:var(--font-display);font-size:5rem;line-height:0.6;color:#B22222;opacity:0.15;display:block;margin-bottom:10px}
+.founder-quote{font-family:var(--font-display);font-size:1.25rem;font-weight:600;font-style:italic;color:#222;line-height:1.6;margin-bottom:24px;padding-left:20px;border-left:3px solid #D4AF37}
+.founder-body{font-family:var(--font-ui);font-size:0.85rem;color:#777;line-height:1.85;margin-bottom:14px;font-weight:400}
+.founder-divider{width:48px;height:2px;background:linear-gradient(90deg,#B22222,#FF9933);border-radius:2px;margin:28px 0}
+.founder-sig-row{display:flex;align-items:center;gap:20px}
+.founder-sig-name{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:#222;font-style:italic;letter-spacing:-0.01em;display:block}
+.founder-sig-title{font-family:var(--font-ui);font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#888;display:block;margin-top:4px}
+.founder-sig-icon{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#B22222,#FF9933);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+@media(max-width:1024px){.founder-inner{grid-template-columns:340px 1fr;gap:52px}.founder-years-badge{right:-10px}}
+@media(max-width:768px){.founder-inner{grid-template-columns:1fr;gap:40px}.founder-photo-frame{max-width:340px;margin:0 auto;aspect-ratio:1/1}.founder-years-badge{right:-10px;top:16px}.founder-content{padding-right:0}}
+</style>
+  <div class="container">
+    <div class="founder-inner">
+
+      <div class="founder-photo-col" style="position:relative;">
+        <div class="founder-photo-frame">
+          <!-- ★ Replace YOUR_PHOTO.jpg with your actual image filename -->
+          <img
+            id="founderImg"
+            src="YOUR_PHOTO.jpg"
+            alt="Founder of ProSpices"
+            onerror="this.style.display='none';document.getElementById('founderPlaceholder').style.display='flex';"
+          >
+          <div id="founderPlaceholder" class="founder-photo-placeholder" style="display:none;">
+            <span class="ph-icon">👤</span>
+            <span class="ph-label">Add your photo here.<br>Replace YOUR_PHOTO.jpg</span>
+          </div>
+        </div>
+        <div class="founder-accent-bar"></div>
+        <div class="founder-years-badge">
+          <span class="by-big">15+</span>
+          <span class="by-small">Years of<br>Passion</span>
+        </div>
+      </div>
+
+      <div class="founder-content">
+        <div class="section-tag">From the Founder</div>
+        <!-- ★ Replace with your real name and title -->
+        <span class="founder-eyebrow">Rajesh Agarwal — Founder & Managing Director</span>
+        <h2 class="section-title">Built on <span>Trust,</span><br>Fuelled by Flavour</h2>
+        <span class="founder-quote-mark">"</span>
+        <!-- ★ Replace with your own quote -->
+        <blockquote class="founder-quote">
+          I started ProSpices because I was tired of seeing adulterated spices on shelves. Every Indian family deserves to cook with something real.
+        </blockquote>
+        <!-- ★ Replace with your own story -->
+        <p class="founder-body">Growing up in a household where my grandmother ground her own masalas every morning, I understood early that the soul of Indian cooking lies in the purity of its spices. After two decades in the food industry, I founded ProSpices in 2009 with a single belief: quality should never be a compromise.</p>
+        <p class="founder-body">Today, we work directly with over 200 farm families across Rajasthan, Gujarat, Andhra Pradesh, and Kerala. Every farmer is a partner, not a vendor. Every batch that leaves our facility carries the weight of that trust — tested, sealed, and delivered with pride.</p>
+        <div class="founder-divider"></div>
+        <div class="founder-sig-row">
+          <div class="founder-sig-icon">🌶️</div>
+          <div>
+            <!-- ★ Replace with your real name and designation -->
+            <span class="founder-sig-name">Rajesh Agarwal</span>
+            <span class="founder-sig-title">Founder & MD, ProSpices · Est. 2009</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 /* ─── FAQ ────────────────────────────────────────────────── */
 #faq {
