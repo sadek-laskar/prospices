@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="ProSpices – Premium Indian Spices & Masalas. Pure Taste. Authentic Tradition. Farm-fresh spices sourced directly from Indian farms, hygienically processed and packaged for households, restaurants, and food businesses.">
+<meta name="description" content="ProSpices – Premium Indian Spices & Masalas by Sadek. Pure Taste. Authentic Tradition. Farm-fresh spices sourced directly from Indian farms, hygienically processed and packaged for households, restaurants, and food businesses.">
 <meta name="keywords" content="Indian spices, masala, turmeric powder, red chilli powder, garam masala, biryani masala, ProSpices, authentic spices, pure spices">
 <meta name="author" content="ProSpices">
 <meta property="og:title" content="ProSpices – Pure Taste. Authentic Tradition.">
@@ -326,7 +326,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   position: relative;
   z-index: 2;
   max-width: 780px;
+  padding-top: 90px;
 }
+@media (max-width: 768px) { .hero-content { padding-top: 100px; } }
+@media (max-width: 480px) { .hero-content { padding-top: 110px; } }
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -344,8 +347,21 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   background: rgba(255,153,51,0.08);
   margin-bottom: 28px;
   animation: fadeInDown 0.8s ease both;
+  white-space: nowrap;
+  width: fit-content;
+  max-width: 100%;
 }
-.hero-badge::before { content: '✦'; font-size: 0.6rem; }
+.hero-badge::before { content: '✦'; font-size: 0.6rem; flex-shrink: 0; }
+@media (max-width: 480px) {
+  .hero-badge {
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    padding: 7px 13px;
+    gap: 6px;
+    white-space: normal;
+    text-align: left;
+  }
+}
 
 .hero-title {
   font-family: var(--font-display);
@@ -1539,7 +1555,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     <div class="hero-content">
       <div class="hero-badge">🌿 Farm to Kitchen — 100% Pure Spices</div>
       <h1 class="hero-title">
-        Authentic Indian Spices by Sadek Laskar<br>
+        Authentic Indian Spices<br>
         Crafted for <span class="accent">Every Kitchen</span>
       </h1>
       <p class="hero-sub">
