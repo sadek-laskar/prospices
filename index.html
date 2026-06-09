@@ -93,6 +93,34 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--charcoal);
 }
 .section-title span { color: var(--red); }
+  .section-title span { color: var(--red); }
+
+.gold-shine {
+  background: linear-gradient(
+    135deg,
+    #8B6914 0%,
+    #D4AF37 25%,
+    #F5E27A 45%,
+    #FFD700 50%,
+    #F5E27A 55%,
+    #D4AF37 75%,
+    #8B6914 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+  filter: drop-shadow(0px 2px 4px rgba(180,140,20,0.5))
+          drop-shadow(0px 1px 2px rgba(0,0,0,0.4));
+  animation: goldShine 3s ease-in-out infinite;
+  background-size: 200% auto;
+}
+
+@keyframes goldShine {
+  0%   { background-position: 0% center; }
+  50%  { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
 .section-sub {
   font-family: var(--font-body);
   font-size: 1.15rem;
@@ -1557,7 +1585,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
       <div class="hero-badge">🌿 Farm to your Kitchen — Zero Chemicals. Infinite Purity</div>
       <h1 class="hero-title">
         Authentic Indian Spices<br>
-        Crafted by <span class="accent">Sadek & Dilruba</span>
+        Crafted by <span class="accent gold-shine">Sadek & Dilruba</span>
       </h1>
       <p class="hero-sub">
         Sourced from the finest farms across India, our spices carry centuries of tradition in every pinch — delivering vibrant colour, bold aroma, and uncompromising purity.
