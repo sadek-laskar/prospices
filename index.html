@@ -2046,7 +2046,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   </div>
 </section>
 <!-- FOUNDER -->
-<section id="founder" style="padding:110px 0 120px;background:#FAF6EE;position:relative;overflow:hidden;">
+<section id="founder" style="padding:110px 0 120px;position:relative;overflow:hidden;">
+<div style="position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=1800&auto=format&fit=crop&q=80');background-size:cover;background-position:center;background-attachment:fixed;"></div>
+<div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(22,5,5,0.92) 0%,rgba(100,20,10,0.82) 50%,rgba(22,5,5,0.88) 100%);"></div>
 <style>
 .founder-inner{display:grid;grid-template-columns:420px 1fr;gap:80px;align-items:center}
 .founder-photo-col{position:relative}
@@ -2060,19 +2062,19 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .founder-years-badge .by-big{font-size:1.8rem;display:block}
 .founder-years-badge .by-small{font-family:var(--font-ui);font-size:0.6rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;margin-top:4px;display:block}
 .founder-content{padding-right:20px}
-.founder-eyebrow{font-family:var(--font-ui);font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#B22222;margin-bottom:22px;display:block}
+.founder-eyebrow{font-family:var(--font-ui);font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#FF9933;margin-bottom:22px;display:block}
 .founder-quote-mark{font-family:var(--font-display);font-size:5rem;line-height:0.6;color:#B22222;opacity:0.15;display:block;margin-bottom:10px}
-.founder-quote{font-family:var(--font-display);font-size:1.2rem;font-weight:600;font-style:italic;color:#222;line-height:1.6;margin-bottom:24px;padding-left:20px;border-left:3px solid #D4AF37}
-.founder-body{font-family:var(--font-ui);font-size:0.85rem;color:#777;line-height:1.85;margin-bottom:14px;font-weight:400}
+.founder-quote{font-family:var(--font-display);font-size:1.2rem;font-weight:600;font-style:italic;color:rgba(255,255,255,0.9);line-height:1.6;margin-bottom:24px;padding-left:20px;border-left:3px solid #D4AF37}
+.founder-body{font-family:var(--font-ui);font-size:0.85rem;color:rgba(255,255,255,0.6);line-height:1.85;margin-bottom:14px;font-weight:400}
 .founder-divider{width:48px;height:2px;background:linear-gradient(90deg,#B22222,#FF9933);border-radius:2px;margin:28px 0}
 .founder-sig-row{display:flex;align-items:center;gap:20px}
-.founder-sig-name{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:#222;font-style:italic;letter-spacing:-0.01em;display:block}
-.founder-sig-title{font-family:var(--font-ui);font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#888;display:block;margin-top:4px}
+.founder-sig-name{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:#fff;font-style:italic;letter-spacing:-0.01em;display:block}
+.founder-sig-title{font-family:var(--font-ui);font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);display:block;margin-top:4px}
 .founder-sig-icon{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#B22222,#FF9933);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
 @media(max-width:1024px){.founder-inner{grid-template-columns:340px 1fr;gap:52px}.founder-years-badge{right:-10px}}
 @media(max-width:768px){.founder-inner{grid-template-columns:1fr;gap:40px}.founder-photo-frame{max-width:320px;margin:0 auto;aspect-ratio:1/1}.founder-years-badge{right:-10px;top:16px}.founder-content{padding-right:0}}
 </style>
-  <div class="container">
+  <div class="container" style="position:relative;z-index:1;">
     <div class="founder-inner">
 
       <div class="founder-photo-col reveal-left">
@@ -2096,10 +2098,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
       </div>
 
       <div class="founder-content reveal-right">
-        <div class="section-tag">From the Founder</div>
+        <div class="section-tag" style="color:var(--saffron);background:rgba(255,153,51,0.1);border-color:rgba(255,153,51,0.3);">From the Founder</div>
         <!-- ★ Replace with your name and title -->
         <span class="founder-eyebrow">Sadek Laskar — Founder & Managing Director</span>
-        <h2 class="section-title">Built on <span>Trust,</span><br>Fuelled by Flavour</h2>
+        <h2 class="section-title" style="color:#fff;">Built on <span>Trust,</span><br>Fuelled by Flavour</h2>
         <span class="founder-quote-mark">"</span>
         <!-- ★ Replace with your own words -->
         <blockquote class="founder-quote">
@@ -2114,7 +2116,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
           <div>
             <!-- ★ Replace with your real name -->
             <span class="founder-sig-name">Sadek Laskar</span>
-            <span class="founder-sig-title">Founder & MD, ProSpices · Est. 2021</span>
+            <span class="founder-sig-title">Founder & MD, ProSpices · Estd. 2026</span>
           </div>
         </div>
       </div>
