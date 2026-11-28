@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProSpices Blog | Spice Guides, Tips and Recipes</title>
+<meta name="description" content="Practical guides from ProSpices on spotting pure spices, storing masalas and cooking with Indian spices.">
+<link rel="canonical" href="https://prospices.in/blog.html">
+<meta property="og:title" content="ProSpices Blog | Spice Guides, Tips and Recipes">
+<meta property="og:description" content="Practical guides on pure spices, storage and cooking from the ProSpices team in Bangalore.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://prospices.in/blog.html">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,600&family=Raleway:wght@400;500;600;700;800&display=swap');
+:root{--red:#B22222;--red-dark:#8B1010;--saffron:#FF9933;--gold:#D4AF37;--charcoal:#222;--cream:#FAF6EE;
+--display:'Playfair Display','Georgia',serif;--ui:'Raleway','Trebuchet MS','Segoe UI',Arial,sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--ui);background:var(--cream);color:var(--charcoal);line-height:1.7}
+a{color:inherit;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+
+/* Nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(22,10,5,.96);backdrop-filter:blur(14px);padding:14px 0}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--display);font-size:1.5rem;font-weight:900;color:#fff}
+.logo span{color:var(--saffron)}
+.logo img{width:40px;height:40px;border-radius:10px;object-fit:contain}
+.links{display:flex;gap:26px;flex-wrap:wrap}
+.links a{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.8);padding:4px 0;border-bottom:2px solid transparent;transition:.3s}
+.links a:hover,.links a.on{color:#fff;border-color:var(--saffron)}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,rgba(22,5,5,.94),rgba(100,20,10,.85)),url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=1600&auto=format&fit=crop&q=80') center/cover;padding:90px 0 80px;text-align:center;color:#fff}
+.tag{display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--saffron);border:1px solid rgba(255,153,51,.4);background:rgba(255,153,51,.1);padding:6px 16px;border-radius:50px;margin-bottom:18px}
+.hero h1{font-family:var(--display);font-size:clamp(2rem,5vw,3.4rem);line-height:1.15;margin-bottom:14px}
+.hero h1 em{color:var(--saffron)}
+.hero p{max-width:560px;margin:0 auto;color:rgba(255,255,255,.75);font-size:1.02rem}
+
+/* Posts */
+.posts{padding:80px 0 90px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;align-items:start}
+.post{background:#fff;border-radius:16px;overflow:hidden;border:1px solid rgba(178,34,34,.08);box-shadow:0 6px 28px rgba(0,0,0,.06);transition:.35s}
+.post:hover{transform:translateY(-6px);box-shadow:0 18px 50px rgba(178,34,34,.14)}
+.post img{width:100%;height:190px;object-fit:cover;background:linear-gradient(160deg,#F5EDD8,#EDE0C4)}
+.pb{padding:22px 22px 24px}
+.meta{font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
+.meta span{color:#aaa;font-weight:600;margin-left:6px}
+.post h2{font-family:var(--display);font-size:1.25rem;line-height:1.3;margin-bottom:10px}
+.post p{font-size:.86rem;color:#777;margin-bottom:12px}
+details summary{cursor:pointer;list-style:none;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--red);display:inline-block;padding:4px 0}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:' \2192'}
+details[open] summary::after{content:' \2191'}
+details[open] summary{margin-bottom:12px}
+.full p{color:#555}
+.full h3{font-family:var(--display);font-size:1.02rem;margin:14px 0 6px}
+.full ul{margin:0 0 12px 18px;font-size:.86rem;color:#555}
+
+/* CTA + footer */
+.cta{background:linear-gradient(135deg,var(--red-dark),var(--red));color:#fff;text-align:center;padding:60px 0}
+.cta h2{font-family:var(--display);font-size:1.9rem;margin-bottom:10px}
+.cta p{color:rgba(255,255,255,.8);margin-bottom:22px}
+.btn{display:inline-block;background:#fff;color:var(--red);font-size:.8rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:14px 30px;border-radius:50px;transition:.3s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.25)}
+footer{background:#110505;color:rgba(255,255,255,.4);text-align:center;font-size:.78rem;padding:26px 0}
+footer a{color:var(--saffron)}
+
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.links{gap:16px}.hero{padding:70px 0 60px}.posts{padding:56px 0 64px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-in">
+    <a href="index.html" class="logo"><img src="logo.png" alt="ProSpices logo">Pro<span>Spices</span></a>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="index.html#products">Products</a>
+      <a href="index.html#about">About</a>
+      <a href="blog.html" class="on">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="tag">The ProSpices Journal</div>
+    <h1>Spice Guides, Tips and <em>Kitchen Wisdom</em></h1>
+    <p>Straightforward advice from our Bangalore kitchen on buying, storing and cooking with Indian spices.</p>
+  </div>
+</header>
+
+<main class="posts">
+  <div class="container">
+    <div class="grid">
+
+      <article class="post">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1606951444141-e5533feb55be?w=800&auto=format&fit=crop&q=80" alt="Turmeric powder in a bowl">
+        <div class="pb">
+          <div class="meta">Buying Guide <span>20 Nov 2026</span></div>
+          <h2>How to Check If Your Turmeric Is Pure</h2>
+          <p>Bright yellow is not always a good sign. Here are two quick checks you can do at home.</p>
+          <details>
+            <summary>Read the full article</summary>
+            <div class="full">
+              <p>Turmeric is one of the most commonly adulterated spices, because colour is easy to fake. Some cheap powders are bulked out with starch or tinted with artificial dyes to look brighter than they should.</p>
+              <h3>Two simple home checks</h3>
+              <ul>
+                <li><strong>Water test:</strong> Stir half a teaspoon into a glass of still water. Pure turmeric slowly sinks and gives a pale yellow tint. Powder that streaks bright yellow straight away may contain added colour.</li>
+                <li><strong>Smell and taste:</strong> Real turmeric smells earthy and slightly bitter. A flat smell or a sharp chemical note is a warning sign.</li>
+              </ul>
+              <p>These checks are a quick guide, not a laboratory test. For certainty, buy from brands that publish their sourcing and testing, and check for an FSSAI licence on the pack.</p>
+              <h3>What to look for on the label</h3>
+              <p>The ingredients list should say only "turmeric". Anything else, including "colour" or "permitted additives", is worth a second look.</p>
+            </div>
+          </details>
+        </div>
+      </article>
+
+      <article class="post">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1603122612817-2fe0e0631a93?w=800&auto=format&fit=crop&q=80" alt="Whole and ground cumin spices">
+        <div class="pb">
+          <div class="meta">Storage <span>14 Nov 2026</span></div>
+          <h2>Whole vs Ground Spices: Which Stays Fresh Longer?</h2>
+          <p>Grinding exposes spices to air. Here is how that affects flavour and how to store each kind.</p>
+          <details>
+            <summary>Read the full article</summary>
+            <div class="full">
+              <p>The flavour in a spice lives in its natural oils. When a spice is ground, far more of its surface meets air, so those oils fade faster. That is why whole spices generally stay potent much longer than ground ones.</p>
+              <h3>A practical rule</h3>
+              <ul>
+                <li>Whole spices such as cumin, coriander seed and pepper can stay good for a couple of years if stored well.</li>
+                <li>Ground spices are best used within about a year, and sooner once the pack is open.</li>
+              </ul>
+              <h3>Storage tips</h3>
+              <ul>
+                <li>Use airtight containers, and keep them away from the stove and direct sunlight.</li>
+                <li>Always use a dry spoon. Moisture spoils spices quickly.</li>
+                <li>Buy smaller packs more often rather than one large pack that sits open for months.</li>
+              </ul>
+              <p>If a spice has lost its smell when you rub a pinch between your fingers, it has lost most of its flavour too.</p>
+            </div>
+          </details>
+        </div>
+      </article>
+
+      <article class="post">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1682490301133-db17d61a5324?w=800&auto=format&fit=crop&q=80" alt="Garam masala spices">
+        <div class="pb">
+          <div class="meta">Cooking <span>8 Nov 2026</span></div>
+          <h2>Garam Masala: What Goes In and When to Add It</h2>
+          <p>Add it at the wrong time and the aroma disappears. Timing makes all the difference.</p>
+          <details>
+            <summary>Read the full article</summary>
+            <div class="full">
+              <p>Garam masala is a blend of warming spices, and recipes vary from region to region and house to house. Common ingredients include cardamom, cinnamon, cloves, black pepper and cumin.</p>
+              <h3>When to add it</h3>
+              <p>Unlike turmeric or chilli, which cook in oil at the start, garam masala is a finishing spice. Its fragrant oils are delicate and fade with long cooking. Stir it in during the last few minutes, or sprinkle it over the dish just before serving.</p>
+              <h3>How much to use</h3>
+              <ul>
+                <li>Start with half a teaspoon for a dish serving four, then taste and adjust.</li>
+                <li>Too much can make a dish bitter, so build up slowly.</li>
+              </ul>
+              <p>Try it in dals, sabzis, rajma and biryani. Our Garam Masala is stone-ground in small batches so the aroma is strong even in small amounts.</p>
+            </div>
+          </details>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</main>
+
+<section class="cta">
+  <div class="container">
+    <h2>Questions About Our Spices?</h2>
+    <p>Ask us anything about sourcing, bulk orders or which blend suits your kitchen.</p>
+    <a href="index.html#contact" class="btn">Contact Us</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">&copy; 2026 ProSpices, Bangalore &middot; <a href="index.html">Back to Home</a></div>
+</footer>
+
+</body>
+</html>
