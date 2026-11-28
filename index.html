@@ -2435,19 +2435,43 @@ document.querySelectorAll('.weight-tag').forEach(tag => {
 
 // ─── CONTACT FORM ────────────────────────────────────────
 function handleSubmit() {
-  const name = document.getElementById('fname').value.trim();
-  const email = document.getElementById('femail').value.trim();
-  const msg = document.getElementById('fmsg').value.trim();
+  const name  = document.getElementById('fname').value.trim();
   const phone = document.getElementById('fphone').value.trim();
-  if (!name || !email || !msg || !phone) {
+  const email = document.getElementById('femail').value.trim();
+  const type  = document.getElementById('ftype').value;
+  const msg   = document.getElementById('fmsg').value.trim();
+  const spam  = document.getElementById('fwebsite') ? document.getElementById('fwebsite').value : '';
+
+  if (spam) return; // hidden field filled in means a bot
+
+  if (!name || !phone || !email || !msg) {
     alert('Please fill in all required fields.');
     return;
   }
-  const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailReg.test(email)) { alert('Please enter a valid email address.'); return; }
-  document.getElementById('formSuccess').style.display = 'block';
-  ['fname','femail','fphone','fmsg','ftype'].forEach(id => { document.getElementById(id).value = ''; });
-  setTimeout(() => { document.getElementById('formSuccess').style.display = 'none'; }, 5000);
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+  if (!/^\d{10}$/.test(phone.replace(/\s/g, ''))) {
+    alert('Please enter a 10-digit phone number.');
+    return;
+  }
+
+  const text =
+    '*New enquiry from prospices.in*\n\n' +
+    '*Name:* ' + name + '\n' +
+    '*Phone:* +91 ' + phone + '\n' +
+    '*Email:* ' + email + '\n' +
+    '*I am a:* ' + (type || 'Not specified') + '\n\n' +
+    '*Message:*\n' + msg;
+
+  const url = 'https://wa.me/918746014976?text=' + encodeURIComponent(text);
+  window.open(url, '_blank', 'noopener');
+
+  const ok = document.getElementById('formSuccess');
+  ok.style.display = 'block';
+  ['fname','fphone','femail','ftype','fmsg'].forEach(id => document.getElementById(id).value = '');
+  setTimeout(() => { ok.style.display = 'none'; }, 8000);
 }
 
 // ─── PRODUCT ENQUIRE BUTTONS ─────────────────────────────
